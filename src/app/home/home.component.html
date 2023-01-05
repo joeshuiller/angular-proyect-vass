@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="ajust-spinner" *ngIf="loading">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <h2>Cargando...</h2>
+    </div>
+    <div class="row" *ngIf="dataAll.length != 0">
+        <div class="col-12">
+            <h1>Listado de Heroes</h1>
+        </div>
+        <div class="col-3 ajust" *ngFor="let item of dataAll" (click)="routerLink(item.id)">
+            <div class="card">
+                <img [src]="item.images.md" alt="angular-proyect">
+                <h4>{{item.name}}</h4>
+                <div class="content">
+                    <p><strong>Inteligencia: </strong>{{item.powerstats.intelligence}}%</p>
+                    <p><strong>Inteligencia: </strong>{{item.powerstats.strength}}%</p>
+                    <p><strong>Velocidad: </strong>{{item.powerstats.speed}}%</p>
+                    <p><strong>Durabilidad: </strong>{{item.powerstats.durability}}%</p>
+                    <p><strong>Poder: </strong>{{item.powerstats.power}}%</p>
+                    <p><strong>Combate: </strong>{{item.powerstats.combat}}%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

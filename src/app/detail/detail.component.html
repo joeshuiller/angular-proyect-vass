@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="ajust-spinner" *ngIf="loading">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <h2>Cargando...</h2>
+    </div>
+    <div class="row ajust" *ngIf="dataAllId">
+        <div class="col-12">
+            <h1>Heroe</h1>
+        </div>
+        <div class="col-12">
+            <button class="ajust-buttom" (click)="routerLink()">Regresar</button>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <img [src]="dataAllId.images.md" alt="angular-proyect">
+                <h4>{{dataAllId.name}}</h4>
+                <div class="content">
+                    <p><strong>Inteligencia: </strong>{{dataAllId.powerstats.intelligence}}%</p>
+                    <p><strong>Inteligencia: </strong>{{dataAllId.powerstats.strength}}%</p>
+                    <p><strong>Velocidad: </strong>{{dataAllId.powerstats.speed}}%</p>
+                    <p><strong>Durabilidad: </strong>{{dataAllId.powerstats.durability}}%</p>
+                    <p><strong>Poder: </strong>{{dataAllId.powerstats.power}}%</p>
+                    <p><strong>Combate: </strong>{{dataAllId.powerstats.combat}}%</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <h4>Apariencia:</h4>
+                <div class="content">
+                    <p><strong>Color: </strong>{{dataAllId.appearance.eyeColor}}</p>
+                    <p><strong>Sexo: </strong>{{dataAllId.appearance.gender}}</p>
+                    <p><strong>color de pelo: </strong>{{dataAllId.appearance.hairColor}}</p>
+                    <p><strong>Altura: </strong>{{dataAllId.appearance.height[1]}}</p>
+                    <p><strong>Raza: </strong>{{dataAllId.appearance.race}}</p>
+                    <p><strong>Peso: </strong>{{dataAllId.appearance.weight[1]}}</p>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Biografia</h4>
+                <div class="content">
+                    <p><strong>Alias: </strong>{{dataAllId.biography.aliases[0]}}</p>
+                    <p><strong>Aliniamiento: </strong>{{dataAllId.biography.alignment}}</p>
+                    <p><strong>Alter egos: </strong>{{dataAllId.biography.alterEgos}}</p>
+                    <p><strong>Primera impresión: </strong>{{dataAllId.biography.fistAppearence}}</p>
+                    <p><strong>Nombre completo: </strong>{{dataAllId.biography.fullName}}</p>
+                    <p><strong>Lugar de nacimiento: </strong>{{dataAllId.biography.placeOfBirth}}</p>
+                    <p><strong>Publicado por: </strong>{{dataAllId.biography.publisher}}</p>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Conexión</h4>
+                <div class="content">
+                    <p><strong>Grupo de afiliación: </strong>{{dataAllId.connections.groupAffiliation}}</p>
+                    <p><strong>Parientes: </strong>{{dataAllId.connections.relatives}}</p>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Trabajar</h4>
+                <div class="content">
+                    <p><strong>Base: </strong>{{dataAllId.work.base}}</p>
+                    <p><strong>Ocupación: </strong>{{dataAllId.work.occupation}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <img [src]="dataAllId.images.xs" alt="angular-proyect">
+                <h4>{{dataAllId.name}}</h4>
+            </div>
+            <div class="card">
+                <img [src]="dataAllId.images.sm" alt="angular-proyect">
+                <h4>{{dataAllId.name}}</h4>
+            </div>
+            <div class="card">
+                <img [src]="dataAllId.images.md" alt="angular-proyect">
+                <h4>{{dataAllId.name}}</h4>
+            </div>
+            <div class="card">
+                <img [src]="dataAllId.images.lg" alt="angular-proyect">
+                <h4>{{dataAllId.name}}</h4>
+            </div>
+        </div>
+    </div>
+</div>
